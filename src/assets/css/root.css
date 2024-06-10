@@ -89,6 +89,9 @@
   .cs-hide-on-mobile {
     display: none;
   }
+  .cs-dark {
+    display: none;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -211,6 +214,12 @@
   body.dark-mode #dark-mode-toggle .cs-moon {
     transform: translate(-50%, -150%);
     opacity: 0;
+  }
+  body.dark-mode .cs-light {
+    display: none;
+  }
+  body.dark-mode .cs-dark {
+    display: block;
   }
   #dark-mode-toggle {
     display: block;
@@ -597,7 +606,6 @@
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
-    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-top-container {
     background-color: rgba(0, 0, 0, 0.2);

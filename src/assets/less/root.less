@@ -107,6 +107,9 @@
     .cs-hide-on-mobile {
         display: none;
     }
+    .cs-dark {
+        display: none; // add dark logo in darkmode
+    }
 }
 
 /* Desktop - 1024px */
@@ -255,6 +258,12 @@
                 opacity: 0;
             }
         }
+        .cs-light {
+            display: none; // remove light logo in darkmode
+        }
+        .cs-dark {
+            display: block; // add dark logo in darkmode
+        }
     }
 
     #dark-mode-toggle {
@@ -269,6 +278,7 @@
         overflow: hidden;
         padding: 0;
         z-index: 1000;
+        
 
         img, svg {
             //center image inside button
@@ -295,6 +305,7 @@
             opacity: 0;
             transition: transform .3s, opacity .3s;
         }
+
     }
 }
 
@@ -704,7 +715,7 @@
 
             .cs-logo {
                 /* makes it white */
-                filter: grayscale(1) brightness(1000%);
+                // filter: grayscale(1) brightness(1000%);
             }
 
             .cs-top-container {
