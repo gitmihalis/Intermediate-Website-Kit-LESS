@@ -205,6 +205,15 @@
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
+/* handle when mobile is too small to display dark toggle */
+@media only screen and (max-width: 360px) {
+  .cs-moon {
+    display: none;
+  }
+  .cs-sun {
+    display: none;
+  }
+}
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #dark-mode-toggle .cs-sun {
@@ -603,9 +612,6 @@
 @media only screen and (max-width: 1023px) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
   }
   body.dark-mode #cs-navigation .cs-top-container {
     background-color: rgba(0, 0, 0, 0.2);
@@ -1036,11 +1042,6 @@
   }
   body.dark-mode #cs-navigation .cs-top-link {
     opacity: 0.8;
-  }
-  body.dark-mode #cs-navigation .cs-logo,
-  body.dark-mode #cs-navigation .cs-link-icon {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
   }
 }
 /*-- -------------------------- -->
